@@ -1,0 +1,25 @@
+.c2bb{
+  float: top;
+  width: 1424px;
+  height: 370px;
+  overflow: scroll;
+  padding: 10px;
+}
+
+.b2bb{
+    float: left;
+    width: 702px;
+    height: 370px;
+    overflow: scroll;
+    margin: 0 0 -10px 0; 
+}
+
+.userDp{
+  box-sizing: border-box;
+  display: block;
+  border: 1px solid rgb(36,37,38);
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+   
+}

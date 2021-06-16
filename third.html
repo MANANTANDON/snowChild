@@ -1,0 +1,109 @@
+<html>
+<head>
+    <link rel = "stylesheet" href="second.css" type="text/css">
+    <link rel = "stylesheet" href="third.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+  <!-- Top Navigation Bar -->  
+    <div class = "navigationBar" onscroll="scrolling()" id = "nav">
+        <a href="second.html" ><img src = "SnowchildLogo.png"  class = "brandLogo"></a>
+        <ul class = "topNav" style="list-style-type: none;">
+          <li><a class = "material-icons" href = "second.html" id = "H" style="margin-right: 370px;" > home </a></li>
+          <li><a class = "material-icons" href = "third.html" style = "border-bottom: 2px solid #0a69aa"> account_circle</a></li>
+
+        </ul>
+        <input type="button" class = "logOut" id = "out" value = "logout!"> 
+        <div style = "color: rgb(170,171,172); font-family: 'Open Sans'; font-size: 30px; margin-left: 70px;">snow<span style = "color: white">Child</span></div>
+      </div>
+<!-- Navigation Bar ended -->
+<!--inner Html Started -->
+ <div style="margin-top: 70px;">
+     <!-- top Border Box-->
+    <div class = "c2bb" style="background-image: url('wave.png'); background-size: 1424px 370px;">
+        <center><img class = "userDp" id = "userDisplayPic"></img></center>
+    </div>
+     <!-- top Border Box Ended... -->
+     <!-- Bottom Border Box -->
+    <div class = "c2bb" >
+        <div>
+          <!-- Left Border Box -->
+            <div class = "b2bb" >
+                <div class = "userDetails"> 
+                  <div class = "material-icons" style = "color: rgb(170,171,172);">person_pin_circle <span style="font-family: 'Open Sans';"><b>DETAILS:</b></span></div>
+                  <div id = "detail"></div>
+                </div>
+            </div>
+            <!-- Right Border Box -->
+            <div class = "b2bb" >
+                <!-- the fixed box on the top -->
+                <div class = "NRTB">
+                    <p>
+                      <img class = "profilePic" style="float: left; height: 40px; width: 40px; margin: -3.4% 0 0 -1%;" id = "udp"  ></img>
+                      <div id = "FGk5"></div>
+                      <div id = "modalCreate">
+                       <form id = "selfForm">
+                         <textarea id = "UBS" cols = "40" rows = "5" placeholder="For You !" onfocus="this.placeholder=''" onblur="this.placeholder='For you !'" ></textarea>
+                         <button class = "selfBlogSend">Chip !</button>
+                       </form>
+                     </div>
+                    </p>
+                  </div>
+                  <div class = "userConsole" >
+                    <div class = "RTBoxes" id = "un"></div>
+                  </div>
+            </div>
+        </div>
+    </div >
+     <!-- Bottom border Box Ended-->
+
+ </div>
+    
+<!---  Java Script -->
+
+  <!-- Firebase initilisation.... -->
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script>
+
+
+
+<script>
+ 
+ var firebaseConfig = {
+    apiKey: "AIzaSyBd_48IwcnX9pc7wauERUwXejFpT18M8lU",
+    authDomain: "champagnepapi.firebaseapp.com",
+    projectId: "champagnepapi",
+    storageBucket: "champagnepapi.appspot.com",
+    messagingSenderId: "483159366132",
+    appId: "1:483159366132:web:c28187f013d620aaa681a1",
+    measurementId: "G-JCZT7HXLP9"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  //make AUTH and FIRESTORE reference......
+
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+  const storage = firebase.storage();
+  
+
+
+  db.settings({timestampsInSnapshots: true});
+
+
+</script>
+    <script src="manan.js"></script>
+    <script src="third.js"></script>
+    <script>
+
+
+    </script>
+</body>
+</html>
+

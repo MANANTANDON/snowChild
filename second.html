@@ -1,0 +1,118 @@
+<html>
+<head>
+  <title>Main Page</title>
+  <link rel = "stylesheet" href="second.css" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  
+</head>
+<body onload = "myfunc()" >
+  <div id = "loading" ></div>
+  <!-- navigation bar -->
+  <div class = "navigationBar" id = "nav">
+    <a href="second.html" ><img src = "SnowchildLogo.png"  class = "brandLogo"></a>
+    <ul class = "topNav" style="list-style-type: none;">
+      <li><a class = "material-icons" href = "second.html" id = "H" style="margin-right: 370px; border-bottom: 2px solid #0a69aa" > home </a></li>
+      <li><a class = "material-icons" href = "third.html"> account_circle</a></li>
+    </ul>
+    <input type="button" class = "logOut" id = "out" value = "logout!"> 
+    <div style = "color: rgb(170,171,172); font-family: 'Open Sans';font-size: 30px; margin-left: 70px;">snow<span style = "color: white">Child</span></div>
+  </div>
+<div>
+<!-- navigation bar end -->
+  <!-- left Border Box -->
+  <div class = "c3bb" style = "width: 332px;"> <!--c3bb = 3 columns of border box -->
+    <img class = "profilePic" style = "float: left; margin: -5px 66px 0px 66px; border: 10px solid rgb(24,25,26);" id = 'DP'></img>
+    <div id = "userDetails"></div>
+  </div>
+  <!-- Center Border Box -->
+  <div class = "c3bb" style = "width: 744px;" id = "centerColumn" >
+    <!-- non real time box -->
+    <div class = "nrtBoxes" >
+      <p>
+        <img class = "profilePic" style="float: left; height: 40px; width: 40px; margin: -3.4% 0 0 -1%;" id = "dp"  ></img>
+        <div id = "FGk5"></div>
+        <div id = "modalCreate">
+         <form id = "cForm">
+           <textarea id = "userBlog" cols = "40" rows = "5" placeholder="Whats on your mind !" onfocus="this.placeholder=''" onblur="this.placeholder='Whats on your mind !'" ></textarea>
+           <input type = "file" onchange = 'chooseFile(event)' class = "ppp" id = "images">
+           <button class = "blogSend" >Chip !</button>
+         </form>
+       </div>
+      </p>
+    </div>
+    <!-- Non real time box end -->
+    <!-- Real time box start -->
+    <div class = "centerConsole" >
+      <div class = "RTBoxes" id = "un"> 
+      <button class = "like__btn"  id = "like">
+        <div class = "material-icons" style = "font-size: 12px;">favorite_border</div>
+        <span>Like</span>
+      </button>
+    </div>
+    </div>
+   <!-- Real time box start  End -->
+  </div>
+  <!-- Right Border Box -->
+  <div class = "c3bb" style="width: 348px;">
+    <div class = "fBox">
+      <div class = "material-icons" style = "color: rgb(170,171,172) ">person_pin</div><span class = "friends"> Friends: </span>
+     <div class = "friendsConsole">
+
+     </div>
+    </div>
+  </div>
+</div>
+
+<!-- Firebase initilisation -->
+
+
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script>
+
+
+
+<script>
+ 
+ var firebaseConfig = {
+    apiKey: "AIzaSyBd_48IwcnX9pc7wauERUwXejFpT18M8lU",
+    authDomain: "champagnepapi.firebaseapp.com",
+    projectId: "champagnepapi",
+    storageBucket: "champagnepapi.appspot.com",
+    messagingSenderId: "483159366132",
+    appId: "1:483159366132:web:c28187f013d620aaa681a1",
+    measurementId: "G-JCZT7HXLP9"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  //make AUTH and FIRESTORE reference......
+
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+  const storage = firebase.storage();
+  
+
+
+  db.settings({timestampsInSnapshots: true});
+
+
+</script>
+
+
+<script src="second.js"></script>
+<script src="manan.js"></script>
+<script>
+
+    var preloader = document.getElementById("loading")
+    function myfunc(){
+           preloader.style.display = "none";
+    }    
+</script>
+
+</body>
+</html>

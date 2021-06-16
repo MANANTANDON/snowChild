@@ -1,0 +1,166 @@
+<html>
+<head>
+  <title>SnowChild</title>
+  <link rel = "stylesheet" href="style.css" type="text/css">
+
+</head>
+<body onload="myfunc()">
+  <div id = "loading"></div>
+<div>
+    <img class = "sc_logo" src="Snowchild.png" alt="snowchild" width="350px" height="86px" >
+    <p class = "mc56">One Stop destination for all the Users around<br>the world.......</p>
+</div>
+<!-- Sigin Form -->
+<div class = "theBox">
+  <h2 style=" text-align: center; font-family: 'Open Sans';" > SnowChild </h2>
+  <!--sign in form start-->
+    <form method="post" id = "loginForm">
+      <div class="col">
+        <input type="text" name="username" placeholder="Username" required class = "user" id = "signInEmail">
+        <input type="password" name="password" placeholder="Password" required class = "pass" id = "signInPassword" onclick="backtoBasic()">
+        <button type="submit" class = "signIn" id = "signInButton">Sign In ! </button>
+        <hr> 
+        <input type="button" class = "cna" value="Create New Account !"  onclick="document.getElementById('ck78').style.display='block'" >
+      </div>
+    </form>
+     <!--sign in form End-->
+</div>
+<!-- SignIn Form End -->
+
+<!--  Signp Form  -->
+<div id = "ck78" class = "reg">
+  <form class = "SignupForm"  method = "POST" id = "signUpForm">
+    <div class="container">
+      <h1 style="font-family: Open Sans;">Sign up</h1>
+      <h6 style="color: grey; font-family: Open Sans; margin-top: -20px;">in less than 2 min if you are a fast typist... ;)</h6>
+      <hr>
+      <input type="text" placeholder="Name" name="fname"  class = "xxx" id="firstName" required >
+      <input type="text" placeholder="lastName" name="sname"  class = "yyy" id="surname" required >
+      <input type="email" placeholder="email" name="ID" required class = "eee" id="signUpEmail"> <!-- <string>@<string>.com -->
+      <input type="password" placeholder="New password" name="psw" required class = "ppp" id="signUpPassword">
+      <input type="text" placeholder = "location" name="loc" required class = "lll" id="location">
+      <p style="font-family: Open Sans; margin-bottom: 1px;">Date of birth:</p>
+    <div class = "customSelect">
+      <select class = "date" id = 'dd'>
+        <option value = "1">1</option> <option value = "2">2</option> <option value = "3">3</option><option value = "4">4</option><option value = "5">5</option> <option value = "6">6</option>
+        <option value = "7">7</option> <option value = "8">8</option> <option value = "9">9</option> <option value = "10">10</option> <option value = "11" selected = "selected">11</option>
+        <option value = "12">12</option> <option value = "13">13</option> <option value = "14">14</option> <option value = "15">15</option> <option value = "16">16</option> <option value = "17">17</option>
+        <option value = "18">18</option> <option value = "19">19</option> <option value = "20">20</option> <option value = "21">21</option> <option value = "22">22</option> <option value = "23">23</option>
+        <option value = "24">24</option> <option value = "25">25</option> <option value = "26">26</option> <option value = "27">27</option> <option value = "28">28</option> <option value = "29">29</option>
+        <option value = "30">30</option> <option value = "31">31</option>
+      </select>
+      <select class = "month" id = 'mm'>
+        <option value = "Jan">Jan</option> <option value = "Feb">Feb</option> <option value = "Mar">Mar</option> <option value = "Apr">Apr</option> <option value = "May">May</option>
+        <option value = "Jun" selected = "selected">Jun</option> <option value = "Jul">Jul</option> <option value = "Aug">Aug</option> <option value = "Sep">Sep</option>
+        <option value = "Oct">Oct</option> <option value = "Nov">Nov</option> <option value = "Dec">Dec</option>
+      </select>
+      <select class = "year"  id = 'yy'>
+        <option value = "1963" selected = "selected">1963</option> <option value = "1964">1964</option> <option value = "1965">1965</option> <option value = "1966">1966</option> <option value = "1967">1967</option>
+        <option value = "1968">1968</option> <option value = "1969">1969</option> <option value = "1970">1970</option> <option value = "1971">1971</option> <option value = "1972">1972</option> <option value = "1973">1973</option>
+        <option value = "1974">1974</option> <option value = "1975">1975</option> <option value = "1976">1976</option> <option value = "1977">1977</option> <option value = "1978">1978</option> <option value = "1979">1979</option>
+        <option value = "1980">1980</option> <option value = "1981">1981</option> <option value = "1982">1982</option> <option value = "1983">1983</option> <option value = "1984">1984</option> <option value = "1985">1985</option>
+        <option value = "1986">1986</option> <option value = "1987">1987</option> <option value = "1988">1988</option> <option value = "1989">1989</option> <option value = "1990">1990</option> <option value = "1991">1991</option>
+        <option value = "1992">1992</option> <option value = "1993">1993</option> <option value = "1994">1994</option> <option value = "1995">1995</option> <option value = "1996">1996</option> <option value = "1997">1997</option>
+        <option value = "1998">1998</option> <option value = "1999">1999</option> <option value = "2000">2000</option>
+      </select>
+    </div>
+  </div>
+  <div id = 'gen'>
+    <p style="font-family: Open Sans; margin-bottom: 1px;">Gender:</p>
+    <div class = "mans">
+      <input type="radio" id="test1" name="radio-group" >
+      <label for="test1" style="font-family: Open Sans; font-size: 15px;">Male</label>
+    </div>
+    <div class = "mans">
+      <input type="radio" id="test1" name="radio-group"checked>
+      <label for="test2" style="font-family: Open Sans; font-size: 15px;">Female</label>
+   </div>
+   <div class = "mans">
+     <input type="radio" id="test1" name="radio-group">
+     <label for="test3" style="font-family: Open Sans; font-size: 15px;">Other</label>
+  </div>
+ </div>
+ <div id = "DP">
+   <p style="font-family: Open Sans; margin-bottom: 1px;"><b>Profile Image:</b><h6 style="color: grey; font-family: Open Sans; margin: -4px 0 0 0;">( less than 100kb )</h6></p>
+   <input type = "file" onchange = 'chooseFile(event)' class = "ppp" >
+ </div>
+    <br>
+      <button type="submit" class = "aba" >SignUp</button>
+      <hr style = "border: 1px solid rgb(60,61,62);">  
+      <div style = "font-family: 'Open Sans'; font-size: 15px;"> 2021</div>
+</div>
+<!-- SignUp Form Ended-->
+<!-- Footer start -->
+<div>
+  <footer>
+    <div class = "mn99">
+      Manan,Suman,Ankit and SnowChild 2021 copyright all rights reserved and contained in the name of MSA.
+      <hr>
+      Snowchild name has been taken from TheWeeknds song from his 6th studio album After Hours. it is an amazing and dark album, it tells about the how a man feels when his feelings are broken and its leads to break up, TheWeeknd remorse first that i am Alone Again
+      but he relises that its way Too Late for him to get back and he tells himself that he has been the Hardest To Love and he is now Scared To Live again, he gets remined of his time when he started singing at the age of 16 he has no home and no place but only
+      his voice and lyrics which made him the man he is now,
+    </div>
+ </footer>
+<!-- Footer End -->
+<!-- Java Script/ Firebase initilized -->
+ <script>
+
+ var modal = document.getElementById('ck78')
+
+ window.onclick = function(event){
+   if (event.target == modal){
+     modal.style.display = "none"
+   }
+ }
+</script>
+
+
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script>
+
+<script>
+
+  var firebaseConfig = {
+    apiKey: "AIzaSyBd_48IwcnX9pc7wauERUwXejFpT18M8lU",
+    authDomain: "champagnepapi.firebaseapp.com",
+    projectId: "champagnepapi",
+    storageBucket: "champagnepapi.appspot.com",
+    messagingSenderId: "483159366132",
+    appId: "1:483159366132:web:c28187f013d620aaa681a1",
+    measurementId: "G-JCZT7HXLP9"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  //make AUTH and FIRESTORE reference......
+
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+  const storage = firebase.storage();
+
+
+  db.settings({timestampsInSnapshots: true});
+
+
+</script>
+
+<script src = "manan.js"></script>
+<script src = "second.js"></script>
+
+<script> 
+   var preloader = document.getElementById("loading");
+   function myfunc(){
+     preloader.style.display = "none";
+   }
+   var back = document.getElementById("signInPassword");
+   function backtoBasic(){
+     back.style.border = "1px solid grey";
+   }
+</script>
+<!-- Java Script End -->
+</body>
+</html>
